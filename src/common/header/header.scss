@@ -1,0 +1,76 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.head {
+    background-color: #0f3460;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Contact Info */
+.left-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.contact-info {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+.icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+/* Right Section */
+.right-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.flag {
+    width: 20px;
+    height: 15px;
+}
+
+/* Show/Hide Button */
+.toggle-btn {
+    background: #ff6600;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .left-row, .right-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

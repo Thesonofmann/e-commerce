@@ -1,0 +1,159 @@
+// General Styles
+.NewArrivals {
+    padding: 40px 0;
+    background: #f9f9f9;
+  
+    .container-bag {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .heading-d_flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+  
+      .heading-left {
+        display: flex;
+        align-items: center;
+  
+        img {
+          margin-right: 10px;
+        }
+  
+        h2 {
+          font-size: 24px;
+          color: #333;
+        }
+      }
+  
+      .heading-right {
+        span {
+          font-size: 16px;
+          color: #26e07f;
+          cursor: pointer;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: darken(#26e07f, 10%);
+          }
+        }
+      }
+    }
+  
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+  
+    .box1 {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 3s ease-in-out infinite;
+  
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+  
+      .img-name {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      h4 {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #333;
+      }
+  
+      span {
+        display: block;
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+  
+      .add-to-cart-btn {
+        background: #26e07f;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+  
+        &:hover {
+          background: darken(#26e07f, 10%);
+        }
+      }
+    }
+  
+    // Scroll to Top Button
+    .scroll-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #26e07f;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        background: darken(#26e07f, 10%);
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  // Floating Animation
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 768px) {
+    .NewArrivals {
+      .content {
+        gap: 15px;
+      }
+  
+      .box1 {
+        width: 45%; // Two items per row on smaller screens
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .NewArrivals {
+      .box1 {
+        width: 100%; // One item per row on mobile
+      }
+    }
+  }

@@ -1,0 +1,367 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.shop {
+  background: #f8f9fa;
+  padding: 30px 0;
+
+  .container {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  .category {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+
+    .chead {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+
+      h1 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #f3f3f3;
+      }
+
+      i {
+        font-size: 20px;
+        color: #007bff;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .box2 {
+      text-align: center;
+      margin-top: 10px;
+
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+
+        &:hover {
+          background: darken(#007bff, 10%);
+        }
+      }
+    }
+  }
+
+  .contentWidth {
+    flex: 1;
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .heading-right {
+        color: #007bff;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+
+    .product-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+.cart {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: 16px;
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
+
+.box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .img-not {
+    position: relative;
+
+    .discount {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      padding: 5px 8px;
+      border-radius: 3px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 180px;
+      object-fit: contain;
+
+      @media (max-width: 768px) {
+        max-height: 140px;
+      }
+
+      @media (max-width: 480px) {
+        max-height: 120px;
+      }
+    }
+
+    .product-like {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: white;
+      padding: 5px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+      i {
+        color: red;
+      }
+    }
+  }
+
+  .product-details {
+    margin-top: 10px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .rate {
+      margin: 5px 0;
+
+      i {
+        color: #ffc107;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #28a745;
+      }
+
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background: darken(#007bff, 10%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .shop {
+    padding: 20px 0;
+  }
+
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .box {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+  }
+
+  .box {
+    padding: 10px;
+  }
+
+  .product-details {
+    h3 {
+      font-size: 14px;
+    }
+
+    .price h4 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .category {
+    display: block;
+    text-align: center;
+
+    .box {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .heading {
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .box {
+    padding: 8px;
+  }
+}
+
+
+// Blur Animation
+@keyframes blurIn {
+    0% {
+      filter: blur(10px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blurOut {
+    0% {
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(10px);
+      opacity: 0;
+    }
+  }
+  
+  // Rotate Animation
+  @keyframes rotateIn {
+    0% {
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotateOut {
+    0% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  // Apply Blur + Rotate Animation to Image
+  .img-not img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    animation: blurIn 0.8s ease-in-out, rotateIn 1s ease-in-out;
+  
+    @media (max-width: 768px) {
+      max-height: 140px;
+    }
+  
+    @media (max-width: 480px) {
+      max-height: 120px;
+    }
+  }
+  
+  // Add hover effect to blur out + rotate
+  .img-not:hover img {
+    animation: blurOut 0.8s ease-in-out, rotateOut 1s ease-in-out;
+  }
